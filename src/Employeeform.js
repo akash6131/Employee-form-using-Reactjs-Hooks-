@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css"; // We'll define CSS in this file
+import "./App.css";
 
 function EmployeeForm() {
   const [formData, setFormData] = useState({
@@ -65,6 +65,7 @@ function EmployeeForm() {
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
+          className={errors.firstName ? "error-border" : ""}
         />
         {errors.firstName && <p className="error">{errors.firstName}</p>}
       </div>
@@ -86,6 +87,7 @@ function EmployeeForm() {
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
+          className={errors.lastName ? "error-border" : ""}
         />
         {errors.lastName && <p className="error">{errors.lastName}</p>}
       </div>
@@ -97,6 +99,7 @@ function EmployeeForm() {
           name="dob"
           value={formData.dob}
           onChange={handleChange}
+          className={errors.dob ? "error-border" : ""}
         />
         {errors.dob && <p className="error">{errors.dob}</p>}
       </div>
@@ -108,6 +111,7 @@ function EmployeeForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          className={errors.email ? "error-border" : ""}
         />
         {errors.email && <p className="error">{errors.email}</p>}
       </div>
@@ -119,6 +123,7 @@ function EmployeeForm() {
           name="phoneNumber"
           value={formData.phoneNumber}
           onChange={handleChange}
+          className={errors.phoneNumber ? "error-border" : ""}
         />
         {errors.phoneNumber && <p className="error">{errors.phoneNumber}</p>}
       </div>
@@ -129,6 +134,7 @@ function EmployeeForm() {
           name="gender"
           value={formData.gender}
           onChange={handleChange}
+          className={errors.gender ? "error-border" : ""}
         >
           <option value="">Choose Select Gender</option>
           <option value="male">Male</option>
@@ -145,6 +151,7 @@ function EmployeeForm() {
           name="startTime"
           value={formData.startTime}
           onChange={handleChange}
+          className={errors.startTime ? "error-border" : ""}
         />
         {errors.startTime && <p className="error">{errors.startTime}</p>}
       </div>
@@ -156,6 +163,7 @@ function EmployeeForm() {
           name="endTime"
           value={formData.endTime}
           onChange={handleChange}
+          className={errors.endTime ? "error-border" : ""}
         />
         {errors.endTime && <p className="error">{errors.endTime}</p>}
       </div>
@@ -167,6 +175,7 @@ function EmployeeForm() {
           name="jobPosition"
           value={formData.jobPosition}
           onChange={handleChange}
+          className={errors.jobPosition ? "error-border" : ""}
         />
         {errors.jobPosition && <p className="error">{errors.jobPosition}</p>}
       </div>
@@ -177,6 +186,7 @@ function EmployeeForm() {
           name="teams"
           value={formData.teams}
           onChange={handleChange}
+          className={errors.teams ? "error-border" : ""}
         >
           <option value="">Select...</option>
           <option value="teamA">Team A</option>
@@ -191,6 +201,7 @@ function EmployeeForm() {
           name="designation"
           value={formData.designation}
           onChange={handleChange}
+          className={errors.designation ? "error-border" : ""}
         >
           <option value="">Select...</option>
           <option value="junior">Junior</option>
@@ -206,6 +217,7 @@ function EmployeeForm() {
           name="billableHours"
           value={formData.billableHours}
           onChange={handleChange}
+          className={errors.billableHours ? "error-border" : ""}
         />
         {errors.billableHours && <p className="error">{errors.billableHours}</p>}
       </div>
